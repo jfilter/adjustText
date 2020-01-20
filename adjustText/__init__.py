@@ -665,5 +665,5 @@ def adjust_text(texts, x=None, y=None, add_objects=None, ax=None,
                         format=save_format, dpi=150)
     elif on_basemap:
         ax.draw(r)
-
-    return i+1
+    return [(get_text_position(text, ax=ax), text.get_va(), text.get_ha()) for text in texts]
+    # return i+1
